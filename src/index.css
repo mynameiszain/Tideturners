@@ -1,0 +1,223 @@
+@font-face {
+  font-family: 'FREEBOOT';
+  src: url('./assets/fonts/FREEBOOT.TTF') format('truetype'); /* Oldest Browsers */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Verdana Bold';
+  src: url('./assets/fonts/verdana-bold.ttf') format('truetype'); /* Oldest Browsers */
+  font-style: normal;
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'Verdana Italic';
+  src: url('./assets/fonts/verdana-bold-italic.ttf') format('truetype'); /* Oldest Browsers */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Verdana';
+  src: url('./assets/fonts/verdana.ttf') format('truetype'); /* Oldest Browsers */
+  font-style: normal;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.header_height{
+  min-height: 700px;
+  height: 100%;
+}
+
+.dirt{
+  background: url('assets/HYHsite/Dirt.webp');
+}
+
+
+/* ************************************************************Wave Starting*****************************************************/
+
+
+.ocean { 
+  height: 10%;
+  width:100%;
+  position:absolute;
+  bottom:0;
+  left:0;
+  background: #015871;
+}
+
+.wave {
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/85486/wave.svg) repeat-x; 
+  position: absolute;
+  top: -198px;
+  width: 6400px;
+  height: 198px;
+  animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
+  transform: translate3d(0, 0, 0);
+}
+
+.wave:nth-of-type(2) {
+  top: -175px;
+  animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) -.125s infinite, swell 7s ease -1.25s infinite;
+  opacity: 1;
+}
+
+@keyframes wave {
+  0% {
+    margin-left: 0;
+  }
+  100% {
+    margin-left: -1600px;
+  }
+}
+
+@keyframes swell {
+  0%, 100% {
+    transform: translate3d(0,-25px,0);
+  }
+  50% {
+    transform: translate3d(0,5px,0);
+  }
+}
+
+/* ************************************************************Wave Ending*****************************************************/
+
+.team_section{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  justify-content: center;
+  gap: 40px;
+}
+
+.card {
+  width: 320px;
+  height: 500px;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 8px solid #fff;
+  position: relative;
+}
+
+.card-img{
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.card:hover .card-body{
+  right: 0;
+}
+
+.card-body{
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: -100%;
+  position: absolute;
+  background: #1f3d4738;
+  backdrop-filter: blur(5px);
+  border-radius: 15px;
+  color: white;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: 0.5s;
+}
+
+.card-title{
+  text-transform: uppercase;
+  font-size: 50px;
+  font-weight: 500;
+}
+
+.card-sub-title{
+  text-transform: capitalize;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.card-info{
+  font-size: 16px;
+  line-height: 25px;
+  margin: 40px 0;
+  font-weight: 400;
+}
+
+.card-btn{
+  color: #1f3d47;
+  background: #8fabba;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-transform: capitalize;
+  border: none;
+  outline: none;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.parallax-container {
+  perspective: 1px; /* Set a perspective for 3D depth */
+  height: 100vh; /* Stretch container to full viewport height */
+  overflow-y: scroll; /* Enable smooth scrolling */
+}
+
+.parallax-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.logo {
+  /* Center the logo horizontally */
+  justify-content: center;
+  align-items: center;
+  transform: translateZ(0); /* Avoid flickering or z-index issues */
+}
+
+.background,
+.middleground,
+.foreground {
+  opacity: 1;
+  transform: translateZ(0);
+}
+
+.background {
+  transform: translateZ(-1px); 
+}
+
+.middleground {
+  transform: translateZ(-2px); 
+}
+
+.foreground {
+  transform: translateZ(-3px); 
+}
+
+
+.parallax-container.active .logo {
+  transform: translateY(-100vh) scale(2);
+  opacity: 0;
+}
+
+.parallax-container.active .background {
+  transform: translateY(50vh);
+  opacity: 0.5;
+}
+
+.parallax-container.active .middleground {
+  transform: translateY(25vh);
+  opacity: 0.25;
+}
+
+.parallax-container.active .foreground {
+  transform: translateY(10vh);
+  opacity: 0.1;
+}
+

@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react';
 import HYHsite_Main_Background from '../../assets/HYHsite/HYHsite_Main_Background.png'
-import HYHsite_Main_Foreground from '../../assets/HYHsite/HYHsite_Main_Foreground.png'
+import HYHsite_Main_Foreground from '../../assets/HYHsite/HYHsite_Main_Foreground-cropped.png'
 import HYHsite_Main_Logo from '../../assets/HYHsite/HYHsite_Main_Logo.png'
+import Topleafborder from '../../assets/HYHsite/Leaf.png'
 
 const HMR_Header = () => {
   useEffect(() => {
@@ -32,6 +33,7 @@ const HMR_Header = () => {
       <section class="image_section">
         <div class="image_container">
             <img class="image_1" id="parallaxImage" src={HYHsite_Main_Background} alt="Background" />
+            <img class="image_4" src={Topleafborder} alt="Background" />
             <img class="image_2" id="parallaxImage2" src={HYHsite_Main_Foreground} alt="Foreground" />
             <img class="image_3"  src={HYHsite_Main_Logo} alt="Logo" />
         </div>

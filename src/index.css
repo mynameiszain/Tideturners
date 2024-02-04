@@ -172,6 +172,9 @@
   width: 100%;
   height: 100%;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .image_container img{
@@ -181,10 +184,23 @@
 }
 
 .image_container .image_2,
-.image_container .image_3 {
+.image_container .image_3, 
+.image_container .image_4 {
   position: absolute;
-  inset: 0;
   z-index: 10;
+}
+
+.image_container .image_2{
+  margin: auto;
+  object-fit: contain;
+  margin: auto;
+  top: 15%;
+}
+
+.image_container .image_4{
+  object-fit: cover;
+  margin: auto;
+  height: 100%;
 }
 
 .scaled {

@@ -8,7 +8,7 @@ pnpm-debug.log*
 lerna-debug.log*
 
 node_modules
-src/assets/Hysite
+src/assets/HYHsite
 src/assets/Profiles
 src/assets/TTsite
 dist

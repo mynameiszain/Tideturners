@@ -13,6 +13,7 @@ const HMR = () => {
   return (
     <>
       <Navbar items={HMRmenuItems} />
+      <HMR_Header />
       <section className="dirt">
         <HMR_Trailer />
         <HMR_AboutSection />

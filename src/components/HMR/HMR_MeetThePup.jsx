@@ -26,7 +26,7 @@ const HMR_MeetThePup = () => {
 
   return (
     <>
-    <section className=''>
+    <section className='py-[120px]'>
         <div className='container max-w-7xl mx-auto'>
             <div className='flex flex-col gap-y-6'>
                 <div className='w-full'>

@@ -5,7 +5,7 @@ import HYHsite_IHFHT_text from '../../assets/HYHsite/HYHsite_IHFHT_text.png'
 const HMR_AboutSection = () => {
   return (
     <>
-    <section className='py-[4rem]'>
+    <section className='py-[120px]'>
         <div className='grid grid-cols-1 lg:grid-cols-2 items-center gap-y-6 max-w-7xl mx-auto px-4'>
             <div className="flex w-full justify-center content-around">
                 <img width={600} src={HYHsite_aboutsection_maloy} alt="Maloy" />

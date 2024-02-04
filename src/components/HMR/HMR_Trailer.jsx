@@ -8,7 +8,7 @@ import Paper from '../../assets/HYHsite/Paper.webp'
 const HMR_Trailer = () => {
   return (
     <>
-    <section className='pt-[60px] relative min-h-[650px] lg:min-h-[1000px]  bg-center bg-no-repeat bg-cover' style={{ backgroundImage: `url(${Paper})` }}>
+    <section className='pt-[60px] relative min-h-[800px] lg:min-h-[1000px]  bg-center bg-no-repeat bg-cover' style={{ backgroundImage: `url(${Paper})` }}>
         <div className='container max-w-7xl mx-auto space-y-14'>
             <div className='flex justify-center items-center px-4 border-[16px] border-white drop-shadow-lg max-w-[1000px] mx-auto'>
                 <ReactPlayer 

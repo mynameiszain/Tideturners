@@ -5,8 +5,8 @@ import { TTmenuItems } from "../api/api";
 
 const Navbar = ({ items }) => {
   return (
-    <nav className="h-20 flex flex-col justify-center items-center">
-      <div className="container max-w-7xl mx-auto px-4 flex items-center justify-between">
+    <nav className="min-h-20 flex flex-col justify-center items-center">
+      <div className="container max-w-7xl mx-auto px-4 flex flex-col md:flex-row gap-4 py-4 items-center justify-between">
         <div>
           <Link to={"/"}>
             <img

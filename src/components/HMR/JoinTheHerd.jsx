@@ -11,7 +11,7 @@ import HYHsite_dogsheepchase_discord from '../../assets/HYHsite/HYHsite_dogsheep
 const JoinTheHerd = () => {
   return (
     <>
-    <section className="pt-[60px] relative min-h-[650px] lg:min-h-[1400px]  bg-center bg-no-repeat bg-cover" style={{ backgroundImage: `url(${Paper})` }}>
+    <section className="py-[120px] relative min-h-[650px] lg:min-h-[1400px]  bg-center bg-no-repeat bg-cover flex flex-col justify-center" style={{ backgroundImage: `url(${Paper})` }}>
         <div className='container max-w-7xl mx-auto'>
             <div className='flex flex-col items-center space-y-10 px-4'>
                 <div>
